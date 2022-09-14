@@ -236,10 +236,10 @@ public class Auto extends SubCommand {
         PlayerAutoPlotEvent event = this.eventDispatcher
                 .callAuto(player, plotarea, schematic, sizeX, sizeZ);
         if (event.getEventResult() == Result.DENY) {
-            player.sendMessage(
+           /* player.sendMessage(
                     TranslatableCaption.of("events.event_denied"),
                     Template.of("value", "Auto claim")
-            );
+            );*/
             return true;
         }
         boolean force = event.getEventResult() == Result.FORCE;
@@ -344,10 +344,10 @@ public class Auto extends SubCommand {
                     plots.stream().map(Plot::getId).collect(Collectors.toList())
             );
             if (!force && mergeEvent.getEventResult() == Result.DENY) {
-                player.sendMessage(
+                /*player.sendMessage(
                         TranslatableCaption.of("events.event_denied"),
                         Template.of("value", "Auto merge")
-                );
+                );*/
                 return false;
             }
             return plotarea.mergePlots(mergeEvent.getPlots(), true);
