@@ -65,7 +65,7 @@ subprojects {
     }
 
     dependencies {
-        implementation(platform("com.intellectualsites.bom:bom-1.18.x:1.13"))
+        implementation(platform("com.intellectualsites.bom:bom-1.18.x:1.14"))
     }
 
     dependencies {
@@ -174,10 +174,7 @@ subprojects {
     tasks {
 
         compileJava {
-            options.compilerArgs.addAll(arrayOf("-Xmaxerrs", "1000"))
-            options.compilerArgs.add("-Xlint:all")
-            for (disabledLint in arrayOf("processing", "path", "fallthrough", "serial"))
-                options.compilerArgs.add("-Xlint:$disabledLint")
+            options.compilerArgs.add("-parameters")
             options.isDeprecation = true
             options.encoding = "UTF-8"
         }
