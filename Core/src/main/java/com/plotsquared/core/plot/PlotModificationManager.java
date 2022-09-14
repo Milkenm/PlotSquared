@@ -499,10 +499,10 @@ public final class PlotModificationManager {
 
                     if (event.getEventResult() == Result.DENY) {
                         if (player != null) {
-                            player.sendMessage(
+                            /*player.sendMessage(
                                     TranslatableCaption.of("events.event_denied"),
                                     Template.of("value", "Auto merge on claim")
-                            );
+                            );*/
                         }
                         return;
                     }

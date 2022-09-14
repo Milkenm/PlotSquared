@@ -336,10 +336,10 @@ public final class FlagCommand extends Command {
         Plot plot = player.getLocation().getPlotAbs();
         PlotFlagAddEvent event = eventDispatcher.callFlagAdd(plotFlag, plot);
         if (event.getEventResult() == Result.DENY) {
-            player.sendMessage(
+            /*player.sendMessage(
                     TranslatableCaption.of("events.event_denied"),
                     Template.of("value", "Flag set")
-            );
+            );*/
             return;
         }
         boolean force = event.getEventResult() == Result.FORCE;
@@ -395,10 +395,10 @@ public final class FlagCommand extends Command {
         Plot plot = player.getLocation().getPlotAbs();
         PlotFlagAddEvent event = eventDispatcher.callFlagAdd(plotFlag, plot);
         if (event.getEventResult() == Result.DENY) {
-            player.sendMessage(
+            /*player.sendMessage(
                     TranslatableCaption.of("events.event_denied"),
                     Template.of("value", "Flag add")
-            );
+            );*/
             return;
         }
         boolean force = event.getEventResult() == Result.FORCE;
@@ -465,10 +465,10 @@ public final class FlagCommand extends Command {
         final PlotFlag<?, ?> flagWithOldValue = plot.getFlagContainer().getFlag(flag.getClass());
         PlotFlagRemoveEvent event = eventDispatcher.callFlagRemove(flag, plot);
         if (event.getEventResult() == Result.DENY) {
-            player.sendMessage(
+            /*player.sendMessage(
                     TranslatableCaption.of("events.event_denied"),
                     Template.of("value", "Flag remove")
-            );
+            );*/
             return;
         }
         boolean force = event.getEventResult() == Result.FORCE;
@@ -518,10 +518,10 @@ public final class FlagCommand extends Command {
                     PlotFlag<?, ?> plotFlag = parsedFlag.createFlagInstance(list);
                     PlotFlagAddEvent addEvent = eventDispatcher.callFlagAdd(plotFlag, plot);
                     if (addEvent.getEventResult() == Result.DENY) {
-                        player.sendMessage(
+                        /*player.sendMessage(
                                 TranslatableCaption.of("events.event_denied"),
                                 Template.of("value", "Re-addition of " + plotFlag.getName())
-                        );
+                        );*/
                         return;
                     }
                     if (plot.setFlag(addEvent.getFlag())) {

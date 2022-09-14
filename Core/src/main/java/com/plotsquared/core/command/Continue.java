@@ -68,10 +68,10 @@ public class Continue extends SubCommand {
         int size = plot.getConnectedPlots().size();
         if (!Settings.Done.COUNTS_TOWARDS_LIMIT && (player.getAllowedPlots()
                 < player.getPlotCount() + size)) {
-            player.sendMessage(
+            /*player.sendMessage(
                     TranslatableCaption.of("permission.cant_claim_more_plots"),
                     Template.of("amount", String.valueOf(player.getAllowedPlots()))
-            );
+            );*/
             return false;
         }
         if (plot.getRunning() > 0) {

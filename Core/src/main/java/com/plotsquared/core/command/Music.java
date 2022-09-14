@@ -104,10 +104,10 @@ public class Music extends SubCommand {
                             .createFlagInstance(item.getType());
                     PlotFlagRemoveEvent event = eventDispatcher.callFlagRemove(plotFlag, plot);
                     if (event.getEventResult() == Result.DENY) {
-                        getPlayer().sendMessage(
+                        /*getPlayer().sendMessage(
                                 TranslatableCaption.of("events.event_denied"),
                                 Template.of("value", "Music removal")
-                        );
+                        );*/
                         return true;
                     }
                     plot.removeFlag(event.getFlag());
@@ -121,10 +121,10 @@ public class Music extends SubCommand {
                             .createFlagInstance(item.getType());
                     PlotFlagAddEvent event = eventDispatcher.callFlagAdd(plotFlag, plot);
                     if (event.getEventResult() == Result.DENY) {
-                        getPlayer().sendMessage(
+                        /*getPlayer().sendMessage(
                                 TranslatableCaption.of("events.event_denied"),
                                 Template.of("value", "Music addition")
-                        );
+                        );*/
                         return true;
                     }
                     plot.setFlag(event.getFlag());

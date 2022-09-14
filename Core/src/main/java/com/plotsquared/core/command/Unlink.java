@@ -84,10 +84,10 @@ public class Unlink extends SubCommand {
                         PlotUnlinkEvent.REASON.PLAYER_COMMAND
                 );
         if (event.getEventResult() == Result.DENY) {
-            player.sendMessage(
+            /*player.sendMessage(
                     TranslatableCaption.of("events.event_denied"),
                     Template.of("value", "Unlink")
-            );
+            );*/
             return true;
         }
         boolean force = event.getEventResult() == Result.FORCE;

@@ -128,10 +128,10 @@ public class Merge extends SubCommand {
         PlotMergeEvent event =
                 this.eventDispatcher.callMerge(plot, direction, max, player);
         if (event.getEventResult() == Result.DENY) {
-            player.sendMessage(
+            /*player.sendMessage(
                     TranslatableCaption.of("events.event_denied"),
                     Template.of("value", "Merge")
-            );
+            );*/
             return false;
         }
         boolean force = event.getEventResult() == Result.FORCE;

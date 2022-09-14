@@ -52,10 +52,10 @@ public class Desc extends SetCommand {
                     .getFlagContainer()
                     .getFlag(DescriptionFlag.class), plot);
             if (event.getEventResult() == Result.DENY) {
-                player.sendMessage(
+                /*player.sendMessage(
                         TranslatableCaption.of("events.event_denied"),
                         Template.of("value", "Description removal")
-                );
+                );*/
                 return false;
             }
             plot.removeFlag(event.getFlag());
@@ -67,10 +67,10 @@ public class Desc extends SetCommand {
                 .getFlag(DescriptionFlag.class)
                 .createFlagInstance(desc), plot);
         if (event.getEventResult() == Result.DENY) {
-            player.sendMessage(
+            /*player.sendMessage(
                     TranslatableCaption.of("events.event_denied"),
                     Template.of("value", "Description set")
-            );
+            );*/
             return false;
         }
         boolean result = plot.setFlag(event.getFlag());

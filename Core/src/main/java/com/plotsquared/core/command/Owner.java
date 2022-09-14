@@ -90,10 +90,10 @@ public class Owner extends SetCommand {
                     plot.hasOwner()
             );
             if (event.getEventResult() == Result.DENY) {
-                player.sendMessage(
+                /*player.sendMessage(
                         TranslatableCaption.of("events.event_denied"),
                         Template.of("value", "Owner change")
-                );
+                );*/
                 return;
             }
             uuid = event.getNewOwner();
@@ -113,10 +113,10 @@ public class Owner extends SetCommand {
                         PlotUnlinkEvent.REASON.NEW_OWNER
                 );
                 if (unlinkEvent.getEventResult() == Result.DENY) {
-                    player.sendMessage(
+                    /*player.sendMessage(
                             TranslatableCaption.of("events.event_denied"),
                             Template.of("value", "Unlink on owner change")
-                    );
+                    );*/
                     return;
                 }
                 if (plot.getPlotModificationManager().unlinkPlot(unlinkEvent.isCreateRoad(), unlinkEvent.isCreateRoad())) {

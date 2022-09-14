@@ -77,10 +77,10 @@ public class Clear extends Command {
         final Plot plot = check(player.getCurrentPlot(), TranslatableCaption.of("errors.not_in_plot"));
         Result eventResult = this.eventDispatcher.callClear(plot).getEventResult();
         if (eventResult == Result.DENY) {
-            player.sendMessage(
+            /*player.sendMessage(
                     TranslatableCaption.of("events.event_denied"),
                     Template.of("value", "Clear")
-            );
+            );*/
             return CompletableFuture.completedFuture(true);
         }
         if (plot.getVolume() > Integer.MAX_VALUE) {

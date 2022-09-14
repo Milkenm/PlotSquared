@@ -80,10 +80,10 @@ public class Claim extends SubCommand {
         final PlayerClaimPlotEvent event = this.eventDispatcher.callClaim(player, plot, schematic);
         schematic = event.getSchematic();
         if (event.getEventResult() == Result.DENY) {
-            player.sendMessage(
+            /*player.sendMessage(
                     TranslatableCaption.of("events.event_denied"),
                     Template.of("value", "Claim")
-            );
+            );*/
             return true;
         }
         boolean force = event.getEventResult() == Result.FORCE;
@@ -196,10 +196,10 @@ public class Claim extends SubCommand {
                         PlotMergeEvent mergeEvent = Claim.this.eventDispatcher
                                 .callMerge(plot, Direction.ALL, Integer.MAX_VALUE, player);
                         if (mergeEvent.getEventResult() == Result.DENY) {
-                            player.sendMessage(
+                            /*player.sendMessage(
                                     TranslatableCaption.of("events.event_denied"),
                                     Template.of("value", "Auto merge on claim")
-                            );
+                            );*/
                         } else {
                             if (plot.getPlotModificationManager().autoMerge(
                                     mergeEvent.getDir(),

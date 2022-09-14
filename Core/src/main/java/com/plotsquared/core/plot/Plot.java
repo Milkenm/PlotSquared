@@ -2627,10 +2627,10 @@ public class Plot {
         Plot plot = this.getBasePlot(false);
         Result result = this.eventDispatcher.callTeleport(player, player.getLocation(), plot, cause).getEventResult();
         if (result == Result.DENY) {
-            player.sendMessage(
+            /*player.sendMessage(
                     TranslatableCaption.of("events.event_denied"),
                     Template.of("value", "Teleport")
-            );
+            );*/
             resultConsumer.accept(false);
             return;
         }

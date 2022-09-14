@@ -68,10 +68,10 @@ public class Done extends SubCommand {
         }
         PlotDoneEvent event = this.eventDispatcher.callDone(plot);
         if (event.getEventResult() == Result.DENY) {
-            player.sendMessage(
+            /*player.sendMessage(
                     TranslatableCaption.of("events.event_denied"),
                     Template.of("value", "Done")
-            );
+            );*/
             return true;
         }
         boolean force = event.getEventResult() == Result.FORCE;
@@ -121,7 +121,7 @@ public class Done extends SubCommand {
                 .createFlagInstance(Long.toString(flagValue));
         PlotFlagAddEvent event = eventDispatcher.callFlagAdd(plotFlag, plot);
         if (event.getEventResult() == Result.DENY) {
-            player.sendMessage(TranslatableCaption.of("events.event_denied"));
+            /*player.sendMessage(TranslatableCaption.of("events.event_denied"));*/
             return;
         }
         plot.setFlag(plotFlag);

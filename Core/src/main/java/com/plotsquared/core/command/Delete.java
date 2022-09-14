@@ -76,10 +76,10 @@ public class Delete extends SubCommand {
         }
         Result eventResult = this.eventDispatcher.callDelete(plot).getEventResult();
         if (eventResult == Result.DENY) {
-            player.sendMessage(
+            /*player.sendMessage(
                     TranslatableCaption.of("events.event_denied"),
                     Template.of("value", "Delete")
-            );
+            );*/
             return true;
         }
         boolean force = eventResult == Result.FORCE;

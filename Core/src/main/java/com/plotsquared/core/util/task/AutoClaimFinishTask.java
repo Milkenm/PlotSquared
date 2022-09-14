@@ -66,10 +66,10 @@ public final class AutoClaimFinishTask implements Callable<Boolean> {
         if (area.isAutoMerge()) {
             PlotMergeEvent event = this.eventDispatcher.callMerge(plot, Direction.ALL, Integer.MAX_VALUE, player);
             if (event.getEventResult() == Result.DENY) {
-                player.sendMessage(
+                /*player.sendMessage(
                         TranslatableCaption.of("events.event_denied"),
                         Templates.of("value", "Auto Merge")
-                );
+                );*/
             } else {
                 if (plot.getPlotModificationManager().autoMerge(event.getDir(), event.getMax(), player.getUUID(), player, true)) {
                     eventDispatcher.callPostMerge(player, plot);
